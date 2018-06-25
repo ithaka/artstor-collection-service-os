@@ -1,26 +1,23 @@
 # Introduction to artstor-collection-service-os
 
+Artstor supports hosting collection of images by Public, Institutional, private and personal.
 Artstor collection service provides CRUD methods for dealing with collection of images/objects.
+Currently this service supports Personal collection only.
 
-Personal collection : Services for handling personal collection of images at AIW
+Requirements:
+1. Hosting software such as Jstor's Forum that can upload to AIW platform is required to publish images to Artstor Workspace.
 
-Delete a personal collection Image
-     DELETE /api/v1/pcollection/image
+2. Amazon s3 for storing configuration file.
 
-Upload a personal collection Image
-     POST /api/v1/pcollection/image
+3. Authentication layer provided Ithaka to complete uploading to AIW.
 
-Update a personal collection Media image
-     PUT /api/v1/pcollection/image/{ssid}
+4. Understanding of Forum's cataloging environment.
 
-Update a personal collection Images metadata
-     POST /api/v1/pcollection/image/metadata
+5. Postgres to support CRUD operations on public and institutional collections
 
-Read personal collection Images metadata field definitions
-     GET /api/v1/pcollection/image/metadata/definitions
-
-Personal collection Image Pulbishing Status by ssid
-     GET /api/v1/pcollection/image-status/{ssid}
-
-Artstor contributed content category description
-     GET /api/v1/categorydesc/{id}  Get Category Description
+Library Dependencies:-
+1. clj and ring logger libraries
+2. Ithaka platform libraries needed for logging, authentication and deployment.
+3. Sql libraries yesql and postgresql to support all types of collections in future.
+4. ragtime for setting up test database.
+5. web api and swagger done using compojure.
