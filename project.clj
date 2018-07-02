@@ -1,8 +1,8 @@
 (defproject artstor-collection-service-os "1.0.0"
   :description "Artstor Collection Service"
   :url "http://www.artstor.org/"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "MIT License"
+            :url "https://opensource.org/licenses/MIT"}
 
   :dependencies [[clj-sequoia "3.0.3"]
                  [org.ithaka/clj-iacauth "1.1.3"]
